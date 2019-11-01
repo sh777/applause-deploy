@@ -1,10 +1,11 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: applause
   namespace: demo
   labels:
-     app: applause
+    app: applause
   annotations:
     fluxcd.io/automated: "true"
 spec:
@@ -18,9 +19,9 @@ spec:
         app: applause
     spec:
       containers:
-        - name: applause
-          image: sh777/applause:1.2
-          ports:
-          - containerPort: 80
+      - name: applause
+        image: sh777/applause:1.0.8
+        ports:
+        - containerPort: 80
 
 
