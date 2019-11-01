@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: applause
-        image: sh777/applause:1.0.7
+        image: sh777/applause:1.0.8
         ports:
         - containerPort: 80
 
