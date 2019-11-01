@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: applause
+  namespace: demo
+  labels:
+    app: applause
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      name: http
+  selector:
+     app: applause
+

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: applause
+  namespace: demo
+  labels:
+     app: applause
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: applause
+  template:
+    metadata:
+      labels:
+        app: applause
+    spec:
+      containers:
+        - name: applause
+          image: sh777/applause:1.2
+          ports:
+          - containerPort: 80
+
+
